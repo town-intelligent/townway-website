@@ -4,90 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小鎮文創</title>
-    <script src="https://kit.fontawesome.com/80f60e4717.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/80f60e4717.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white d-flex font-weight-bold">
+<!-- nav -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white d-flex font-weight-bold">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/townwayLogo.svg" alt="" style="height:50px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">關於我們 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">專長換宿</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">實習合作</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">海外專案</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">益站</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">眾樂樂報</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">聯絡我們</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            語言
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">繁體中文</a>
+            <a class="dropdown-item" href="#">简体中文</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href=""><img src="img/search-solid.svg" alt="" style="height: 16px;"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href=""><img src="img/shopping-cart-solid.svg" alt="" style="height: 16px;"></a>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<!-- banner -->
+<div id="carouselExampleControls" class="carousel slide pb-3" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="bg-cover" style="background-image: url(img/index/index-01.png); height: 350px">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="bg-cover" style="background-image: url(img/index/index-01.png); height: 350px">
+            </div>
+        </div>
+        <div class="carousel-item bg-cover banner-img">
+            <div class="bg-cover" style="background-image: url(img/index/index-01.png); height: 350px">
+            </div>
+        </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+</div>
+<!-- content top lg -->
+<section class="mt-5 pb-5">
+    <div class="container-fluid bg-gray" style="height: 420px">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/townwayLogo.svg" alt="" style="height:50px"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">關於我們 <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">專長換宿</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">實習合作</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">海外專案</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">益站</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">眾樂樂報</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">聯絡我們</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                語言
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">繁體中文</a>
-                <a class="dropdown-item" href="#">简体中文</a>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="bg-cover mt-minus-s" style="background-image: url(img/index/index-02.png); height: 460px"></div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center text-center">
+                <div class="text-dark pt-6 pb-9" style="max-height: 460px">
+                    <p class="mb-0 h1 font-weight-bold">元泰竹藝社</p>
+                    <p class="mb-0 pl-lg-4 pr-lg-4 h4 text-gray mt-3 text-justify">「我們不做竹藝術品，日本人連一根火柴都能做到 100 年，元泰也希望能成為竹牙刷的百年老店。」希望能學習日本職人的精神…</p>
+                    <div class="btn btn-dark btn-lg mt-5 rounded-pill">
+                        我想參與
+                    </div>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link d-none d-md-block" href=""><i class="fas fa-search"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link d-none d-md-block" href=""><i class="fas fa-shopping-cart"></i></a>
-            </li>
-            </ul>
+            </div>
+            </div>
         </div>
         </div>
-    </nav>
+</section>
+<!-- content center lg -->
+<section class="mt-5">
+    <div class="container-fluid bg-gray" style="height: 420px">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-center text-center">
+                <div class="text-dark pt-6 pb-9" style="max-height: 460px">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-column pr-5">
+                            <p class="h2 font-weight-bold">2020</p>
+                            <p class="h3 font-weight-bold mt-auto">Apr.08</p>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <p class="h1 font-weight-bold">眾樂樂報</p>
+                            <p class="h4 font-weight-bold text-gray">竹青庭人文空間</p>
+                        </div>
+                    </div>
+                    <p class="mb-0 pl-lg-4 pr-lg-4 h4 text-gray mt-3 text-justify">與在地小農契作，配合竹山的季節限定食材，我們將竹山的豐盛，以家常的美味料理呈上，為您佐上竹編的雅，與您分享日常…</p>
+                    <div class="btn btn-dark btn-lg mt-5 rounded-pill">
+                        了解更多
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-cover mt-minus-s" style="background-image: url(img/index/index-03.png); height: 460px"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+</section>
+<!-- content bottom lg -->
+<section class="mt-5">
+    <div class="container-fluid bg-gray bg-cover d-flex align-items-center" style="background-image: url(img/index/index-05.png); height: 550px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="position: relative;">
+                        <div class="d-flex mb-4">
+                            <div>
+                                <p class="h3 font-weight-bold pb-3">每週少喝<span class="text-bg-blue">四杯珍奶</span>，</p>
+                                <p class="h3 font-weight-bold">換得全家人的<span class="text-bg-red">便利健康</span>！</p>
+                            </div>
+                            <div>
+                                <img src="img/index/feelSafeLogo.svg" alt="" style="height: 55px; position: absolute; top:15px ;right:30px">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap">
+                            <img class="vegetable-box img-fluid" src="img/index/index-04.png" alt="">
+                            <div class="ml-3" style="max-width: 150px;">
+                                <p class="h5 font-weight-bold text-center">足安心蔬菜箱</p>
+                                <p class="h5 font-weight-bold text-center">冬筍會員招募中</p>
+                                <p class="font-weight-bold text-gray">預先儲值$15,000，結帳扣款可再折10%優惠！</p>
+                                <p class="font-weight-bold text-gray">                                       可享1-2次免費或優專價格的農場參訪、DIY或體驗活動。</p>
+                                <div class="btn btn-dark btn-lg mt-3 rounded-pill">
+                                    想了解更多
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</section>
+<!-- link banner -->
+<section class="mt-5">
+    <div class="container-fluid bg-cover d-flex align-items-center" style="background-image: url(img/index/index-06.png); height: 330px">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-7 text-center">
+                    <p class="h1 font-weight-bold mb-5">以你的專長幫助地方成長</p>
+                    <div class="d-flex justify-content-around">
+                        <div class="btn btn-lg btn-outline-dark rounded-pill  btn-width">
+                            <span>臉書專頁</span>
+                        </div>
+                        <div class="btn btn-lg  btn-outline-dark rounded-pill  btn-width">
+                            <span>官方IG</span>
+                        </div>
+                        <div class="btn btn-lg btn-outline-dark rounded-pill  btn-width">
+                            <span>官方Line</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</section>
+<!-- footer -->
+<div class="footer bg-gray pt-5 pb-5 text-center mt-5">
+    <img src="img/townwayLogo.svg" alt="" style="width:200px">
+    <p class="font-weight-bold pt-5 h5">電話 049-2657366 | 電子信箱 forus999@gmail.com | 地址 557 南投縣竹山鎮頂橫街 1 號</p>
+    <p class="font-weight-bold h5 pt-3">Copyright &copy; 小鎮文創股份有限公司 | 網頁設計 小鎮智能 | 本網站感謝台北城東扶輪社贊助</p>
+    <div class="d-flex mt-5 justify-content-center">
+        <img src="img/index/fbLogo.svg" alt="" style="height: 35px;">
+        <img class="pl-5" src="img/index/igLogo.svg" alt="" style="height: 35px;">
+        <img class="pl-5" src="img/index/lineLogo.svg" alt="" style="height: 35px;">
+        <img class="pl-5" src="img/index/youtubeLogo.svg" alt="" style="height: 35px;">
+    </div>
+</div>
 
-    <!-- banner -->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="bg-cover" style="background-image: url(img/index/index-01.png); height: 350px">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="bg-cover" style="background-image: url(img/index/index-01.png); height: 350px">
-                </div>
-            </div>
-            <div class="carousel-item bg-cover banner-img">
-                <!-- <img src="" class="d-block w-100 bg-cover banner-img" alt=""> -->
-                <div class="bg-cover" style="background-image: url(img/index/index-01.png); height: 350px">
-                </div>
-            </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>

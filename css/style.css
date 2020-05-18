@@ -2,12 +2,53 @@ body{
     font-family: "微軟正黑體", "Microsoft JhengHei", arial, sans-serif;
 }
 
-.banner-img{
-    background-image: url("img/index/index-01.png");;
-    height:350px;
-}
-
 .bg-cover{
     background-size: cover;
     background-position: center center;
 }
+
+.bg-gray {
+    background-color: #e3e3e7;
+}
+
+.text-gray{
+    color:#727171;
+}
+
+.mt-minus-s {
+    margin-top: -20px;
+}
+
+.box{
+    width:500px;
+    height:500px;
+    background-color: white;
+}
+
+.vegetable-box{
+    width:50%;
+}
+
+@media(max-width:600px){
+    .box{
+        max-width:100%;
+    }
+    .vegetable-box{
+        max-width:50%;
+    }
+}
+
+.text-bg-blue{
+    background-color: #91cbd1;
+    border-radius: 50px;
+}
+
+.text-bg-red{
+    background-color: #cf988f;
+    border-radius: 50px;
+}
+
+.btn-width{
+    padding:5px 30px;
+}
+
