@@ -25,6 +25,11 @@ body{
     background-color: white;
 }
 
+.box-sm{
+    max-width:320px;
+    background-color: white;
+}
+
 .vegetable-box{
     width:50%;
 }
@@ -51,4 +56,6 @@ body{
 .btn-width{
     padding:5px 30px;
 }
-
+.text-line-height{
+    line-height: 2em;
+}

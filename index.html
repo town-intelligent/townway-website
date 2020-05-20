@@ -30,8 +30,14 @@
         <li class="nav-item">
             <a class="nav-link" href="#">海外專案</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">益站</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            益站
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">販賣機</a>
+            <a class="dropdown-item" href="#">安心農產</a>
+            </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">眾樂樂報</a>
@@ -93,8 +99,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">海外專案</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">益站</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                益站
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">販賣機</a>
+                <a class="dropdown-item" href="#">安心農產</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">眾樂樂報</a>
@@ -116,7 +128,7 @@
     </nav>
 </div>
 <!-- banner -->
-<div id="carouselExampleControls" class="carousel slide pb-3" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide pb-sm-3" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="bg-cover" style="background-image: url(img/index/index-01.png); height: 350px">
@@ -141,7 +153,7 @@
         </a>
 </div>
 <!-- content top lg -->
-<section class="mt-5 pb-5">
+<section class="mt-5 pb-5 d-none d-md-block">
     <div class="container-fluid bg-gray" style="height: 420px">
         <div class="container">
             <div class="row">
@@ -159,10 +171,27 @@
             </div>
             </div>
         </div>
-        </div>
+    </div>
 </section>
+
+<!-- content top sm -->
+<section class="mt-sm-4 d-md-none">
+    <div class="container-fluid d-md-none px-0">
+        <div class="bg-cover" style="height: 350px; background-image: url(img/index/index-02.png)"></div>
+        <div class="bg-gray">
+                <div class="py-4 px-4 d-flex flex-column justify-content-center">
+                    <p class="mb-0 h3 font-weight-bold text-center">元泰竹藝社</p>
+                    <p class="mb-0 pl-lg-4 pr-lg-4 h5 text-gray mt-3 text-justify">「我們不做竹藝術品，日本人連一根火柴都能做到 100 年，元泰也希望能成為竹牙刷的百年老店。」希望能學習日本職人的精神…</p>
+                    <div class="btn btn-dark btn-lg mt-3 rounded-pill">
+                        我想參與
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
 <!-- content center lg -->
-<section class="mt-5">
+<section class="mt-5 d-none d-md-block">
     <div class="container-fluid bg-gray" style="height: 420px">
         <div class="container">
             <div class="row">
@@ -191,12 +220,30 @@
         </div>
         </div>
 </section>
+
+<!-- content center sm -->
+<section class="mt-sm-4 d-md-none">
+    <div class="container-fluid d-md-none px-0">
+        <div class="bg-cover" style="height: 350px; background-image: url(img/index/index-03.png)"></div>
+        <div class="bg-gray">
+                <div class="py-4 px-4 d-flex flex-column justify-content-center">
+                    <p class="mb-1 h3 font-weight-bold text-center">2020 Apr.08</p>
+                    <p class="mb-1 h3 font-weight-bold text-center">眾樂樂報</p>
+                    <p class="h5 font-weight-bold text-gray text-center">竹青庭人文空間</p>
+                    <p class="mb-0 pl-lg-4 pr-lg-4 h6 text-gray mt-3 text-justify">與在地小農契作，配合竹山的季節限定食材，我們將竹山的豐盛，以家常的美味料理呈上，為您佐上竹編的雅，與您分享日常…</p>
+                    <div class="btn btn-dark btn-lg mt-3 rounded-pill">
+                        了解更多
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
 <!-- content bottom lg -->
-<section class="mt-5">
+<section class="mt-5 d-none d-sm-block">
     <div class="container-fluid bg-gray bg-cover d-flex align-items-center" style="background-image: url(img/index/index-05.png); height: 550px">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 d-none d-sm-block">
                     <div class="box d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="position: relative;">
                         <div class="d-flex mb-4">
                             <div>
@@ -207,7 +254,7 @@
                                 <img src="img/index/feelSafeLogo.svg" alt="" style="height: 55px; position: absolute; top:15px ;right:30px">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap">
+                        <div class="d-flex justify-content-center">
                             <img class="vegetable-box img-fluid" src="img/index/index-04.png" alt="">
                             <div class="ml-3" style="max-width: 150px;">
                                 <p class="h5 font-weight-bold text-center">足安心蔬菜箱</p>
@@ -225,12 +272,30 @@
         </div>
         </div>
 </section>
+
+<!-- content bottom sm -->
+<section class="mt-sm-4 d-sm-none">
+    <div class="container-fluid d-md-none px-0">
+        <div class="bg-cover" style="height: 250px; background-image: url(img/index/index-05.png)"></div>
+        <div class="py-4 px-4 d-flex flex-column justify-content-center align-items-center">
+            <img src="img/index/feelSafeLogo.svg" alt="" style="height: 70px;">
+            <p class="h5 font-weight-bold text-line-height">每週少喝<span class="text-bg-blue">四杯珍奶</span>，<br>換得全家人的<span class="text-bg-red ">便利健康</span>！</p>
+            <img class="vegetable-box img-fluid mb-2" src="img/index/index-04.png" alt="">
+            <p class="h5 font-weight-bold text-center">足安心蔬菜箱</p>
+            <p class="h5 font-weight-bold text-center">冬筍會員招募中</p>
+            <p class="font-weight-bold text-gray">預先儲值$15,000，結帳扣款可再折10%優惠！可享1-2次免費或優專價格的農場參訪、DIY或體驗活動。</p>
+            <div class="btn btn-dark btn-lg mt-3 rounded-pill">
+                想了解更多
+            </div>
+        </div>
+    </div>
+</section>
 <!-- link banner -->
-<section class="mt-5">
+<section class="mt-sm-5">
     <div class="container-fluid bg-cover d-flex align-items-center" style="background-image: url(img/index/index-06.png); height: 330px">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-md-7 text-center">
+                <div class="col-md-8 text-center d-none d-md-block">
                     <p class="h1 font-weight-bold mb-5">以你的專長幫助地方成長</p>
                     <div class="d-flex justify-content-around">
                         <div class="btn btn-lg btn-outline-dark rounded-pill  btn-width">
@@ -244,15 +309,31 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-8 text-center d-md-none">
+                    <p class="h3 font-weight-bold mb-3">以你的專長幫助地方成長</p>
+                    <div class="d-flex justify-content-around flex-column">
+                        <div class="btn btn-lg btn-outline-dark rounded-pill  btn-width mb-3">
+                            <span>臉書專頁</span>
+                        </div>
+                        <div class="btn btn-lg  btn-outline-dark rounded-pill  btn-width mb-3">
+                            <span>官方IG</span>
+                        </div>
+                        <div class="btn btn-lg btn-outline-dark rounded-pill  btn-width">
+                            <span>官方Line</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
 </section>
 <!-- footer -->
-<div class="footer bg-gray pt-5 pb-5 text-center mt-5">
+<div class="footer bg-gray pt-5 pb-5 text-center mt-sm-5">
     <img src="img/townwayLogo.svg" alt="" style="width:200px">
-    <p class="font-weight-bold pt-5 h5">電話 049-2657366 | 電子信箱 forus999@gmail.com | 地址 557 南投縣竹山鎮頂橫街 1 號</p>
-    <p class="font-weight-bold h5 pt-3">Copyright &copy; 小鎮文創股份有限公司 | 網頁設計 小鎮智能 | 本網站感謝台北城東扶輪社贊助</p>
+    <p class="font-weight-bold pt-5 h5 d-none d-sm-block">電話 049-2657366 | 電子信箱 forus999@gmail.com | 地址 557 南投縣竹山鎮頂橫街 1 號</p>
+    <p class="font-weight-bold h5 pt-3 d-none d-sm-block">Copyright &copy; 小鎮文創股份有限公司 | 網頁設計 小鎮智能 | 本網站感謝台北城東扶輪社贊助</p>
+    <p class="pt-5 h6 d-sm-none text-line-height">電話 049-2657366 <br> 電子信箱 forus999@gmail.com <br> 地址 557 南投縣竹山鎮頂橫街 1 號</p>
+    <p class="h6 pt-3 d-sm-none text-line-height">Copyright &copy; 小鎮文創股份有限公司 <br> 網頁設計 小鎮智能 <br> 本網站感謝台北城東扶輪社贊助</p>
     <div class="d-flex mt-5 justify-content-center">
         <img src="img/index/fbLogo.svg" alt="" style="height: 35px;">
         <img class="pl-5" src="img/index/igLogo.svg" alt="" style="height: 35px;">
