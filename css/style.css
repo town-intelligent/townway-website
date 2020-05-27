@@ -59,3 +59,34 @@ body{
 .text-line-height{
     line-height: 2em;
 }
+
+/* Pagination style */
+.pagination > li > a
+{
+    background-color: white;
+    color: #000000;
+    border: 0;
+    
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #000000;
+    background-color: #eee;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #000000 !Important;
+    border: solid 1px #000000 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #000000 !Important;
+    border: solid 1px #000000;
+}
