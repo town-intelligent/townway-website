@@ -6,6 +6,12 @@ body{
     background-size: cover;
     background-position: center center;
 }
+.bg-bottom{
+    background-size: cover;
+    background-position: center bottom;
+}
+
+
 
 .bg-gray {
     background-color: #e3e3e7;
@@ -58,6 +64,10 @@ body{
 }
 .text-line-height{
     line-height: 2em;
+}
+
+.d-inline-block{
+    display: inline-block;
 }
 
 /* Pagination style */
