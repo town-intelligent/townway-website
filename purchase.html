@@ -165,26 +165,29 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-9">
-                <p class="h2 font-weight-bold text-gray mt-5">訂單列表</p>
-                <div class="accordion" id="accordionExample">
-                    <div class="card border-bottom mt-4">
-                        <div class="card-header d-flex" id="headingOne">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            顯示購物車細節
-                            </button>
-                            <div class="h3 ml-auto mb-0">NT.660</div>
-                        </div>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <table class="table table-sm d-none d-md-block">
+        </div>
+        <div class="row mt-3 mt-md-5 justify-content-center">
+        <div class="col-md-9">
+            <p class="h2 font-weight-bold text-gray mt-5">訂單列表</p>
+            <div class="accordion" id="accordionExample">
+                <div class="card border-bottom mt-4">
+                    <div class="card-header d-flex" id="headingOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        顯示購物車細節
+                        </button>
+                        <div class="h3 ml-auto mb-0">NT.660</div>
+                    </div>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="d-none d-md-block">
+                        <table class="table table-sm">
                             <thead>
                                 <tr>
-                                    <th  class="align-middle text-center" width="100">商品縮圖</th>
-                                    <th class="align-middle" scope="col" width="100">
+                                    <th  class="align-middle text-center" width="150">商品縮圖</th>
+                                    <th class="align-middle text-center" scope="col" width="150">
                                     商品名稱
                                     </th>
-                                    <th class="align-middle text-center" scope="col" width="100">
+                                    <th class="align-middle text-center" scope="col" width="150">
                                     規格
                                     </th>
                                     <th class="align-middle text-center" scope="col">
@@ -200,9 +203,9 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                    <img class="img-fluid" src="img/purchase/purchase-05.png" alt=""/>
+                                    <img class="img-fluid" src="img/purchase/purchase-10.png" alt=""/>
                                     </td>
-                                    <td class="align-middle">動物燈飾</td>
+                                    <td class="align-middle text-center">動物燈飾</td>
                                     <td class="align-middle text-center">大象燈飾</td>
                                     <td class="align-middle text-center">1</td>
                                     <td class="align-middle text-center">$580</td>
@@ -221,7 +224,9 @@
                             </tr>
                             </tbody>
                         </table>
-                        <table class="table table-sm d-md-none">
+                    </div>
+                    <div class="d-md-none">
+                        <table class="table table-sm">
                             <thead>
                                 <tr>
                                     <th class="align-middle" scope="col" width="80">
@@ -261,20 +266,65 @@
                             </tr>
                             </tbody>
                         </table>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="row mt-3 mt-md-5 justify-content-center">
+            <div class="col-md-9">
+                <form>
+                    <p class="h2 font-weight-bold text-gray">付款方式</p>
+                    <div class="d-flex mt-3">
+                        <div class="custom-control custom-radio mr-5">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadio1">ATM轉帳匯款</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadio2">信用卡付款</label>
                         </div>
                     </div>
-                <form class="mt-5">
+                    <div class="mt-4">
+                        <p>戶名：小鎮文創股份有限公司</p>
+                        <p>匯款銀行：合作金庫銀行 竹山分行</p>
+                        <p>銀行帳號：354-123567367</p>
+                        <p>銀行代號：006</p>
+                    </div>
+                    <div class="mt-5">
+                        <p>匯款後為方便快速核對並處理您的出貨，請提供帳號後五碼核對。</p>
+                        <p>聯絡資訊如下：</p>
+                        <p>電話：049-2657366</p>
+                        <p>官方LINE ID：@townway</p>
+                        <p>E-mail：forus999@gmail.com</p>
+                    </div>
+                    <p class="h2 font-weight-bold text-gray mt-5">統一發票</p>
+                    <div class="d-flex mt-3">
+                        <div class="custom-control custom-radio mr-5">
+                            <input type="radio" id="customRadio3" name="customRadio2" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadio3">二聯式紙本發票</label>
+                        </div>
+                        <div class="custom-control custom-radio mr-5">
+                            <input type="radio" id="customRadio4" name="customRadio2" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadio4">三聯式紙本發票</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio5" name="customRadio2" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadio5">捐贈公益團體</label>
+                        </div>
+                    </div>
+                    <p class="h2 font-weight-bold text-gray mt-5">訂購人資料</p>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                         <label for="validationDefault01">*會員姓名</label>
-                        <input type="text" class="form-control" id="validationDefault01" value="" required>
+                        <input type="text" class="form-control" id="validationDefault01" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                        <label for="validationDefault02">*電子信箱</label>
-                        <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <label for="validationDefault02">*電子信箱</label>
+                            <input type="text" class="form-control" id="validationDefault02" required>
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row mt-3">
                         <div class="col-md-6 mb-3">
                         <label for="validationDefault03">*行動電話</label>
                         <input type="text" class="form-control" id="validationDefault03" required>
@@ -283,12 +333,51 @@
                             <label for="validationDefault04">連絡電話</label>
                             <input type="text" class="form-control" id="validationDefault04">
                         </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationDefault05">*寄送地址</label>
+                            <input type="text" class="form-control" id="validationDefault05" required>
+                        </div>
+                    </div>
+                    <p class="h2 font-weight-bold text-gray mt-5">收件人資料</p>
+                    <div class="form-row mt-3">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                    同訂購人資料
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                        <label for="validationDefault06">*姓名</label>
+                        <input type="text" class="form-control" id="validationDefault06" value="" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                        <label for="validationDefault07">*電子信箱</label>
+                        <input type="text" class="form-control" id="validationDefault07" value="" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                        <label for="validationDefault08">*行動電話</label>
+                        <input type="text" class="form-control" id="validationDefault08" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault09">連絡電話</label>
+                            <input type="text" class="form-control" id="validationDefault09">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationDefault10">*寄送地址</label>
+                            <input type="text" class="form-control" id="validationDefault10" required>
+                        </div>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="validationDefault05">*您的需求</label>
+                        <label for="validationDefault11">*您的需求</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" required></textarea>
                     </div>
-                    <div class="d-flex justify-content-center pt-5">
+                    <div class="d-flex justify-content-center">
                         <button class="btn btn-dark btn-lg rounded-pill mt-5" type="submit">確定送出</button>
                     </div>
                 </form>
