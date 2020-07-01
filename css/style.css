@@ -11,8 +11,30 @@ body{
     background-position: center bottom;
 }
 
+.bg-hover{
 
+    background-color:rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 10;
+    transition: all 0.3s;
+}
 
+.bg-hover-text{
+    color:white;
+    z-index: 999;
+    transition: all 0.8s;
+}
+.bg-hover:hover{
+    background-color:rgba(0,0,0,0);
+}
+
+.bg-hover:hover .bg-hover-text{
+    text-shadow: 2px 2px 6px rgba(0, 0, 0,0.8);
+}
 .bg-gray {
     background-color: #e3e3e7;
 }
