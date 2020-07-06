@@ -1,3 +1,9 @@
+html,
+body {
+position: relative;
+height: 100%;
+}
+
 body{
     font-family: "微軟正黑體", "Microsoft JhengHei", arial, sans-serif;
 }
@@ -6,6 +12,12 @@ body{
     background-size: cover;
     background-position: center center;
 }
+
+.bg-top{
+    background-size: cover;
+    background-position: center top;
+}
+
 .bg-bottom{
     background-size: cover;
     background-position: center bottom;
@@ -125,4 +137,79 @@ body{
 {
     background-color: #000000 !Important;
     border: solid 1px #000000;
+}
+
+.card-shadow{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0,0.3);
+}
+
+/* Swiper */
+
+/* swiper-wrap 為客製新增之 class，非套件內容 */
+.swiper-wrap{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -90px;
+}
+
+.swiper-container {
+width: 60%;
+height: 100px;
+margin-left: auto;
+margin-right: auto;
+align-self: start;
+}
+
+.swiper-slide {
+background-size: cover;
+background-position: center;
+}
+
+.gallery-top {
+height: 80%;
+width: 60%;
+}
+
+.gallery-thumbs {
+height: 40%;
+box-sizing: border-box;
+padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+height: 60%;
+opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+opacity: 1;
+}
+
+@media (min-width:768px) and (max-width:960px){
+    .gallery-top {
+    width: 80%;
+    }
+}
+
+@media (min-width:768px) and (max-width:960px){
+    .swiper-container {
+    width: 80%;
+    }
+}
+
+@media (max-width:767px){
+    .gallery-top {
+    width: 95%;
+    }
+    .swiper-container {
+    width: 95%;
+    }
+}
+
+@media (max-width:567px){
+    .swiper-wrap{
+    margin-bottom: -150px;
+    }
 }
