@@ -22,22 +22,10 @@
             <a class="nav-link" href="aboutUs.html">關於我們 <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="workExchange.html">專長換宿</a>
+            <a class="nav-link" href="goodIdea.html">我有好點子</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="internshipPlan.html">實習合作</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="overseasProjects.html">海外專案</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            益站
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="store.html">販賣機</a>
-            <a class="dropdown-item" href="organicCrops.html">安心農產</a>
-            </div>
+            <a class="nav-link" href="store.html">益站</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="latestNews.html">眾樂樂報</a>
@@ -54,9 +42,30 @@
             <a class="dropdown-item" href="#">简体中文</a>
             </div>
         </li>
+        <!-- Button trigger modal -->
         <li class="nav-item d-none d-md-block">
-            <a class="nav-link" href=""><img src="img/search-solid.svg" alt="" style="height: 16px;"></a>
+            <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModal"><img src="img/search-solid.svg" alt="" style="height: 16px;"></a>
         </li>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">資料搜尋</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
         <li class="nav-item  d-none d-md-block">
             <a class="nav-link" href="purchase.html"><img src="img/shopping-cart-solid.svg" alt="" style="height: 16px;"></a>
         </li>
@@ -91,22 +100,10 @@
                 <a class="nav-link" href="aboutUs.html">關於我們 <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="workExchange.html">專長換宿</a>
+                <a class="nav-link" href="goodIdea.html">我有好點子</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="internshipPlan.html">實習合作</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="overseasProjects.html">海外專案</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                益站
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="store.html">販賣機</a>
-                <a class="dropdown-item" href="organicCrops.html">安心農產</a>
-                </div>
+                <a class="nav-link" href="store.html">益站</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="latestNews.html">眾樂樂報</a>
@@ -131,9 +128,9 @@
 <!-- classification title -->
 <section>
     <div class="container text-center">
-        <p class="h2 font-weight-bold">專長換宿</p>
+        <p class="h2 font-weight-bold">我有好點子</p>
         <p class="h4 font-weight-lighter">X</p>
-        <p class="h6">WORK EXCHANGE</p>
+        <p class="h6">GOOD IDEA</p>
     </div>    
 </section>
 
@@ -156,10 +153,14 @@
                 <p class="pt-2">早期台灣的日常生活裡，因就地取材方便，約有一半以上是竹製用品，如竹蒸籠、竹椅、竹蓆、竹籃、竹筷等，全盛時期全台約有1500家以上的竹工廠，照顧著台灣人的生活。</p>
                 <p class="h5 font-weight-bold mt-5">人才需求｜</p>
                 <p class="pt-2">企劃人員、設計人員</p>
+                <p class="h5 font-weight-bold mt-5">專案時間｜</p>
+                <p class="pt-2">2020/6/1-2021/5/30</p>
+                <p class="h5 font-weight-bold mt-5">獲得報酬｜</p>
+                <p class="pt-2">元氣竹吸管乙組 + 凹豆杯乙杯</p>
                 <div class="d-flex justify-content-center mt-5">
-                    <div class="btn btn-dark btn-lg mt-auto rounded-pill">
-                        確定參與此專案
-                    </div>
+                    <a class="btn btn-dark btn-lg mt-auto rounded-pill" href="goodIdeaForm.html">
+                        我要加入此專案
+                    </a>
                 </div>
             </div>
         </div>
@@ -167,17 +168,35 @@
 </section>
 
 <!-- footer -->
-<div class="footer bg-gray pt-5 pb-5  mt-sm-5 text-center mt-5">
-    <img src="img/townwayLogo.svg" alt="" style="width:200px">
-    <p class="font-weight-bold pt-5 h5 d-none d-sm-block">電話 049-2657366 | 電子信箱 forus999@gmail.com | 地址 557 南投縣竹山鎮頂橫街 1 號</p>
-    <p class="font-weight-bold h5 pt-3 d-none d-sm-block">Copyright &copy; 小鎮文創股份有限公司 | 網頁設計 小鎮智能 | 本網站感謝台北城東扶輪社贊助</p>
-    <p class="pt-5 h6 d-sm-none text-line-height">電話 049-2657366 <br> 電子信箱 forus999@gmail.com <br> 地址 557 南投縣竹山鎮頂橫街 1 號</p>
-    <p class="h6 pt-3 d-sm-none text-line-height">Copyright &copy; 小鎮文創股份有限公司 <br> 網頁設計 小鎮智能 <br> 本網站感謝台北城東扶輪社贊助</p>
-    <div class="d-flex mt-5 justify-content-center">
-        <img src="img/index/fbLogo.svg" alt="" style="height: 35px;">
-        <img class="pl-5" src="img/index/igLogo.svg" alt="" style="height: 35px;">
-        <img class="pl-5" src="img/index/lineLogo.svg" alt="" style="height: 35px;">
-        <img class="pl-5" src="img/index/youtubeLogo.svg" alt="" style="height: 35px;">
+<div class="footer bg-gray pt-5 pb-3 text-center mt-5">
+    <div class="d-flex justify-content-center align-items-center">
+        <div>
+            <img src="img/townwayLogo.svg" alt="" style="width:250px">
+        </div>
+        <div class="mx-5 px-5 text-left d-none d-lg-block">
+            <p class="font-weight-bold">電話 049-2657366</p>
+            <p class="font-weight-bold">電子信箱 forus999@gmail.com</p>
+            <p class="font-weight-bold">地址 557 南投縣竹山鎮頂橫街 1 號</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="img/index/fbLogo.svg" class="d-none d-lg-block" alt="" style="height: 35px;">
+            <img class="pl-4 d-none d-lg-block" src="img/index/igLogo.svg" alt="" style="height: 35px;">
+            <img class="pl-4 d-none d-lg-block" src="img/index/lineLogo.svg" alt="" style="height: 35px;">
+            <img class="pl-4 d-none d-lg-block" src="img/index/youtubeLogo.svg" alt="" style="height: 35px;">
+        </div>
+    </div>
+    <div class="d-lg-none">
+        <p class="pt-3 text-line-height font-weight-bold">電話 049-2657366 <br> 電子信箱 forus999@gmail.com <br> 地址 557 南投縣竹山鎮頂橫街 1 號</p>
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <p class="d-none d-lg-block ">Copyright &copy; 小鎮文創股份有限公司 | 網頁設計 小鎮智能 | 本網站感謝台北城東扶輪社贊助</p>
+        <p class="d-lg-none text-line-height ">Copyright &copy; 小鎮文創股份有限公司 <br> 網頁設計 小鎮智能 <br> 本網站感謝台北城東扶輪社贊助</p>
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <img src="img/index/fbLogo.svg" class="d-lg-none" alt="" style="height: 35px;">
+        <img class="pl-4 d-lg-none" src="img/index/igLogo.svg" alt="" style="height: 35px;">
+        <img class="pl-4 d-lg-none" src="img/index/lineLogo.svg" alt="" style="height: 35px;">
+        <img class="pl-4 d-lg-none" src="img/index/youtubeLogo.svg" alt="" style="height: 35px;">
     </div>
 </div>
 
