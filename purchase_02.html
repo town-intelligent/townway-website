@@ -22,22 +22,10 @@
             <a class="nav-link" href="aboutUs.html">關於我們 <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="workExchange.html">專長換宿</a>
+            <a class="nav-link" href="goodIdea.html">我有好點子</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="internshipPlan.html">實習合作</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="overseasProjects.html">海外專案</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            益站
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="store.html">販賣機</a>
-            <a class="dropdown-item" href="organicCrops.html">安心農產</a>
-            </div>
+            <a class="nav-link" href="store.html">益站</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="latestNews.html">眾樂樂報</a>
@@ -54,9 +42,30 @@
             <a class="dropdown-item" href="#">简体中文</a>
             </div>
         </li>
+        <!-- Button trigger modal -->
         <li class="nav-item d-none d-md-block">
-            <a class="nav-link" href=""><img src="img/search-solid.svg" alt="" style="height: 16px;"></a>
+            <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModal"><img src="img/search-solid.svg" alt="" style="height: 16px;"></a>
         </li>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">資料搜尋</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
         <li class="nav-item  d-none d-md-block">
             <a class="nav-link" href="purchase.html"><img src="img/shopping-cart-solid.svg" alt="" style="height: 16px;"></a>
         </li>
@@ -91,22 +100,10 @@
                 <a class="nav-link" href="aboutUs.html">關於我們 <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="workExchange.html">專長換宿</a>
+                <a class="nav-link" href="goodIdea.html">我有好點子</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="internshipPlan.html">實習合作</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="overseasProjects.html">海外專案</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                益站
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="store.html">販賣機</a>
-                <a class="dropdown-item" href="organicCrops.html">安心農產</a>
-                </div>
+                <a class="nav-link" href="store.html">益站</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="latestNews.html">眾樂樂報</a>
@@ -127,7 +124,6 @@
         </div>
     </nav>
 </div>
-
 <!-- classification title -->
 <section>
     <div class="container text-center">
@@ -139,33 +135,7 @@
 
 <!-- content -->
 <section>
-    <div class="container mt-5">
-        <div class="row mt-3 mt-md-5 justify-content-center">
-            <div class="col-md-7">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-around">
-                    <div>
-                        <p class="h2 font-weight-bold text-center">01</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid" src="img/purchase/purchase-01.png" alt="" style="height:30px">
-                            <p class="h4 font-weight-bold mb-0">訂單資料填寫</p>
-                        </div>
-                    </div>
-                    <div class="d-none d-md-block">
-                        <img class="mx-3" src="img/purchase/purchase-03.png" alt="" style="height:60px">
-                    </div>
-                    <div class="d-md-none">
-                        <img class="my-3" src="img/purchase/purchase-04.png" alt="" style="height:60px">
-                    </div>
-                    <div>
-                        <p class="h2 font-weight-bold text-center">02</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid mr-2" src="img/purchase/purchase-02.png" alt="" style="height:30px">
-                            <p class="h4 font-weight-bold mb-0">訂單完成</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
         <div class="row mt-3 mt-md-5 justify-content-center">
         <div class="col-md-9">
             <p class="h2 font-weight-bold text-gray mt-5">訂單列表</p>
@@ -182,7 +152,7 @@
                     <div class="d-none d-md-block">
                         <table class="table table-sm">
                             <thead>
-                                <tr>
+                                <tr class="bg-gray">
                                     <th  class="align-middle text-center" width="150">商品縮圖</th>
                                     <th class="align-middle text-center" scope="col" width="150">
                                     商品名稱
@@ -203,7 +173,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                    <img class="img-fluid" src="img/purchase/purchase-10.png" alt=""/>
+                                    <img class="img-fluid" src="img/purchase/purchase-05.png" alt=""/>
                                     </td>
                                     <td class="align-middle text-center">動物燈飾</td>
                                     <td class="align-middle text-center">大象燈飾</td>
@@ -228,7 +198,7 @@
                     <div class="d-md-none">
                         <table class="table table-sm">
                             <thead>
-                                <tr>
+                                <tr class="bg-gray">
                                     <th class="align-middle" scope="col" width="80">
                                     商品名稱
                                     </th>
@@ -273,7 +243,7 @@
         </div>
         <div class="row mt-3 mt-md-5 justify-content-center">
             <div class="col-md-9">
-                <form>
+                <form action="purchaseOrderCheck_01.html">
                     <p class="h2 font-weight-bold text-gray">付款方式</p>
                     <div class="d-flex mt-3">
                         <div class="custom-control custom-radio mr-5">
