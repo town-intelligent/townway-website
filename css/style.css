@@ -212,4 +212,15 @@ opacity: 1;
     .swiper-wrap{
     margin-bottom: -150px;
     }
+    .bg-cover{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media (max-width:414px){
+    .bg-cover-s{
+        max-width: 240px;
+        max-height: 240px;
+    }
 }
