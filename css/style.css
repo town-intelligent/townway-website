@@ -59,6 +59,34 @@ body{
     color:#727171;
 }
 
+.text-small{
+    font-size:12px;
+}
+
+.text-smaller{
+    font-size:10px;
+}
+
+.text-14{
+    font-size: 14px;
+}
+
+.text-middle{
+    font-size: 18px;
+}
+
+.text-line-height{
+    line-height: 1.2em;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mt-18{
+    margin-top: 18px;
+}
+
 .mt-minus-s {
     margin-top: -20px;
 }
