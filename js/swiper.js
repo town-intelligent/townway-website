@@ -1,3 +1,9 @@
+var mySwiper = new Swiper('.swiper-container', {
+    autoplay: {
+        delay: 5000,
+    },
+});
+
 var galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 10,
     slidesPerView: 4,

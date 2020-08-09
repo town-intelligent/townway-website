@@ -59,12 +59,12 @@ body{
     color:#727171;
 }
 
-.text-small{
-    font-size:12px;
-}
-
 .text-smaller{
     font-size:10px;
+}
+
+.text-small{
+    font-size:12px;
 }
 
 .text-14{
