@@ -7,6 +7,38 @@
     <!-- <script src="https://kit.fontawesome.com/80f60e4717.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+	$(document).ready(function () {
+	  var formCart = function () {
+	    var formData = $("#formCart").serialize();
+	    $.ajax({
+		type: 'post',
+		data: formData,
+		dataType: 'json',
+		url: '/add_cart',
+
+		error: function () {
+		    alert("There was an error processing this page.");
+		    return false;
+		},
+
+		complete: function (output) {
+		    console.log("Success");
+		    $('#formCartResults').html(output.responseText);
+		}
+	    });
+	    return false;
+	  };
+
+	  $("#basic-submit").on("click", function (e) {
+	    e.preventDefault();
+	    formCart();
+	  });
+	});
+
+    </script>
 </head>
 <body>
 
@@ -67,10 +99,11 @@
                 <ul>
                     <li class="text-small mt-18 text-line-height">結帳扣款時再享5%優惠。</li>
                 </ul>
-            <form>
+            <form id="formCart" name="formCart">
                 <div class="d-sm-flex align-items-center text-center justify-content-sm-around bg-gray py-3 px-2">
                     <div class="custom-control custom-radio pr-2">
                         <input type="radio" class="custom-control-input" id="validationDefault01" name="radio-stacked" required>
+			<input type="hidden" name="name" value="veg_box">
                         <label class="custom-control-label" for="validationDefault01" style="width: 130px;">60、90、120 cm</label>
                     </div>
                     <div class="text-center">
@@ -79,24 +112,27 @@
 
                     <div class="d-flex align-items-center mt-3 mt-sm-0  pr-sm-2">
                         <label for="validationDefault02" class="mb-0" style="width: 65px;">品項</label>
-                        <select class="custom-select" id="validationDefault02" required>
+                        <select class="custom-select" id="validationDefault02" name="spec" required>
                             <option selected disabled value="">請選擇</option>
-                            <option>60 cm</option>
-                            <option>90 cm</option>
-                            <option>120 cm</option>
+                            <option value="60">60 cm</option>
+                            <option value="90">90 cm</option>
+                            <option value="120">120 cm</option>
                         </select>
                     </div>
                     <div class="d-flex align-items-center mt-3 mt-sm-0">
                         <label for="validationDefault03" style="width: 65px;" class="mb-0">數量</label>
-                        <input type="number" class="form-control" id="validationDefault03" min="1" max="20" required>
+                        <input type="number" class="form-control" id="validationDefault03" min="1" max="20" name="count" required>
                     </div>
                 </div>
                 <div class="form-group mt-3">
-                    <textarea class="form-control" placeholder="若有其他特殊需求，請填寫此欄位(非必填)" id="exampleFormControlTextarea1" rows="10"></textarea>
+                    <textarea name="comment" class="form-control" placeholder="若有其他特殊需求，請填寫此欄位(非必填)" id="exampleFormControlTextarea1" rows="10"></textarea>
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-center mt-5">
-                    <a href="#" class="btn btn-dark rounded-pill mr-md-5">加入購物車</a>
+		    <button type="button" class="btn btn-dark rounded-pill mr-md-5" id="basic-submit">加入購物車</button>
                     <a href="/purchase_01" class="btn btn-dark rounded-pill mt-3 mt-md-0">直接購買</a>
+
+
+                    <!--<button type="button" class="btn btn-dark rounded-pill mr-md-5" id="basic-submit">加入購物車</button>-->
                 </div>
             </form>
 
@@ -107,8 +143,7 @@
 
 <!-- footer -->
 {% include "modules/footer.html" %}
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>

@@ -1,0 +1,64 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小鎮文創</title>
+    <!-- <script src="https://kit.fontawesome.com/80f60e4717.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<!-- navbar -->
+{% include "modules/navbar.html" %}
+
+<!-- classification title -->
+<section>
+    <div class="container text-center">
+        <p class="h2 font-weight-bold">購物結帳</p>
+        <p class="h4 font-weight-lighter">X</p>
+        <p class="h6">SHOPPING CART</p>
+    </div>    
+</section>
+
+<!-- content -->
+<section>
+    <div class="container">
+        <div class="row mt-3 mt-md-5 justify-content-center">
+        <div class="col-md-9">
+            <p class="text-middle font-weight-bold text-gray">訂單編號: {{order_id}}</p>
+            <p class="text-middle font-weight-bold text-gray">訂單查詢</p>
+            <p class="text-small text-line-height mt-18">訂單查詢請輸入訂單編號以便查詢進度。</p>
+            <p class="text-small text-line-height mt-18">若需申請退換貨，請來電或加入官方Line，將由客服人員協助處理。</p>
+            <form class="mt-20" action="/search_order" method="POST">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">訂單編號</label>
+                    <div class="form-row">
+                        <div class="col-md-10">
+                            <input type="text" name="id_order" class="form-control rounded-0" placeholder="請輸入訂單編號" required>
+                        </div>
+                        <div class="col-md-2 mt-2 mt-md-0">
+                            <button type="submit" class="btn btn-dark rounded-0">送出</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="d-flex flex-column flex-md-row justify-content-center mt-5">
+                <a href="/" class="btn btn-dark rounded-pill mr-md-5">回首頁</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+{% include "modules/footer.html" %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}

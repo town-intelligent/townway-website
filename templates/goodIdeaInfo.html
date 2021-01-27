@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -6,7 +7,7 @@
     <title>小鎮文創</title>
     <!-- <script src="https://kit.fontawesome.com/80f60e4717.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
@@ -27,26 +28,25 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-9">
-                <div class="rounded-circle bg-cover mx-auto d-none d-md-block" style="height:500px;  width:500px; background-image: url(img/project/project-01.png);">
+                <div class="rounded-circle bg-cover mx-auto d-none d-md-block" style="height:500px;  width:500px; background-image: url({{obj.thumbnail}});">
                 </div>
-                <div class="rounded-circle bg-cover mx-auto d-md-none" style="height:300px;  width:300px; background-image: url(img/project/project-01.png);">
+                <div class="rounded-circle bg-cover mx-auto d-md-none" style="height:300px;  width:300px; background-image: url({{obj.thumbnail}});">
                 </div>
-                <p class="h2 font-weight-bold text-gray text-middle mt-5">元泰竹藝社</p>
+                <p class="h2 font-weight-bold text-gray text-middle mt-5">{{obj.title}}</p>
                 <p class="font-weight-bold mt-20">關於專案｜</p>
-                <p class="text-small text-line-height mt-18">早期台灣的日常生活裡，因就地取材方便，約有一半以上是竹製用品，
-                如竹蒸籠、竹椅、竹蓆、竹籃、竹筷等，全盛時期全台約有1500家以上的竹工廠，照顧著台灣人的生活。反觀現代生活用品除了「筷子」，幾乎少和竹子聯結，這也是主產業迅速沒落的原因之一。</p>
-                <p class="mt-18 text-small text-line-height mt-18">為了讓竹子可以重回生活的日常，目前元泰竹藝社所開發的產品：竹牙刷、竹吸管、竹杯、竹碗、竹耳扒，都是與日常生活有關的用品，我們不做竹藝術品，日本人連一根火柴都可以做到100年，元泰也希望成為竹牙刷的百年老店。」</p>
-                <p class="mt-18 text-small text-line-height mt-18">希望能學習日本職人的精神，把一件小事做好，並透過跨領域的結合、運用社群網路的能力，集結年輕人的力量一起守護老產業，友善我們的環境、為地球盡點心力。</p>
+
+                <p class="text-small text-line-height mt-18">{{obj.about}} </p>
+
                 <p class="font-weight-bold mt-20">專案需求｜</p>
-                <p class="text-small text-line-height mt-18">早期台灣的日常生活裡，因就地取材方便，約有一半以上是竹製用品，如竹蒸籠、竹椅、竹蓆、竹籃、竹筷等，全盛時期全台約有1500家以上的竹工廠，照顧著台灣人的生活。</p>
+                <p class="text-small text-line-height mt-18"> {{obj.requirement}} </p>
                 <p class="font-weight-bold mt-20">人才需求｜</p>
-                <p class="text-small mt-18">企劃人員、設計人員</p>
+                <p class="text-small mt-18">{{obj.hr}} </p>
                 <p class="font-weight-bold mt-20">專案時間｜</p>
-                <p class="text-small mt-18">2020/6/1-2021/5/30</p>
+                <p class="text-small mt-18">{{obj.duration}} </p>
                 <p class="font-weight-bold mt-20">獲得報酬｜</p>
-                <p class="text-small mt-18">元氣竹吸管乙組 + 凹豆杯乙杯</p>
+                <p class="text-small mt-18">{{obj.salary}}</p>
                 <div class="d-flex justify-content-center mt-5">
-                    <a class="btn btn-dark btn-lg mt-auto rounded-pill" href="goodIdeaForm.html">
+                    <a class="btn btn-dark btn-lg mt-auto rounded-pill" href="/goodIdeaForm">
                         我要加入此專案
                     </a>
                 </div>
@@ -63,3 +63,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
+{% endblock %}

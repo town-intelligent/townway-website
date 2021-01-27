@@ -1,0 +1,4 @@
+{"name":"goodIdea", "path":"static/documents/projects/goodIdea/goodIdea/"}
+{"name":"goodIdeaWork", "path":"static/documents/projects/goodIdea/goodIdeaWork/"}
+{"name":"goodIdeaInternship", "path":"static/documents/projects/goodIdea/goodIdeaInternship/"}
+{"name":"goodIdeaOverseas", "path":"static/documents/projects/goodIdea/goodIdeaOverseas/"}

@@ -1,0 +1,18 @@
+# LINE_BOT
+CHANNEL_ACCESS_TOKEN = "/BUIYj3cuOMHPHWrmEd8BiI8a4J2PHsi9MRJqGM1hl4nsN7vel+z08A7mjrlsPDjuozluKK7V95Qb/RvjJ1EXwu7+WttmFoM2vZbTbrapDDDqt0mxA6O1Nbv8HTueEIX06chmuN5LmqgK0P+SApf8AdB04t89/1O/w1cDnyilFU="
+TYPE_SHOPPING_CART = "SHOPPING_CART"
+TYPE_GOODIDEA = "I_HAVE_GOOD_IDEA"
+TYPE_CONTACT_US = "CONTACT_US"
+TYPE_ORGANICCROPS = "ORGANICCROPS"
+
+# DOCUMENTATIONS
+PATH_IMAGES = "static/img/"
+PATH_GOOD_IDEAS = "/static/documents/projects/goodIdea/"
+PATH_NEWS = "static/documents/news/"
+
+# FILE UPLOAD
+UPLOAD_PATH = "static/upload"
+ALLOWED_EXTENSIONS = set(["png", "jpg", "jpeg"])
+
+# ORDER
+PATH_ORDER = "secret/orders/"

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小鎮文創</title>
+    <!-- <script src="https://kit.fontawesome.com/80f60e4717.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/swiper.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script>
+
+      $(document).ready(function () {
+          var formCart = function () {
+            var formData = $("#formCart").serialize();
+            $.ajax({
+                type: 'post',
+                data: formData,
+                dataType: 'json',
+                url: '/add_cart',
+
+                error: function () {
+                    alert("There was an error processing this page.");
+                    return false;
+                },
+
+                success: function (output) {
+                    console.log("Successi");
+                    alert("商品已成功加入購物車");
+                },
+
+                complete: function (output) {
+                    console.log("Complete");
+                    $('#formCartResults').html(output.responseText);
+                }
+            });
+            return false;
+          };
+
+          $("#basic-submit").on("click", function (e) {
+            e.preventDefault();
+            formCart();
+          });
+        });
+
+    </script>
+
+</head>
+<body>
+
+<!-- navbar -->
+{% include "modules/navbar.html" %}
+
+<!-- classification title -->
+<section>
+    <div class="container text-center">
+        <p class="h2 font-weight-bold">益站</p>
+        <p class="h4 font-weight-lighter">X</p>
+        <p class="h6">STORE</p>
+        <p class="mt-5">以『車站』為意念作為出發點，<br>建構一個有進有出、相互交流、持續流動的生活品牌。</p>
+    </div>    
+</section>
+
+<nav class="navbar navbar-expand-md navbar-light justify-content-center mt-5">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="/store">販賣機</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/organicCrops">安心農產</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Swiper -->
+<div class="swiper-wrap">
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/07-08小豬合照.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/07-1小豬原色橫式.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/07-2小豬原色直式.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/08-1小豬白色橫式.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/08-2小豬白色直式.jpg)"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-black"></div>
+        <div class="swiper-button-prev swiper-button-black"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs d-none d-sm-block">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/07-08小豬合照.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/07-1小豬原色橫式.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/07-2小豬原色直式.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/08-1小豬白色橫式.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(static/img/store/storeProductInfo/06/07-08小豬/07-08小豬形象照/08-2小豬白色直式.jpg)"></div>
+        </div>
+    </div>
+</div>
+<!-- content -->
+<section>
+    <div class="container mt-5">
+        <div class="row mt-3 mt-md-5 justify-content-center">
+            <div class="col-md-8">
+                <div class="d-flex justify-content-center">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/S31SVxV8ZuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <p class="text-middle font-weight-bold mt-3 mt-md-5">吱竹系列（小豬）2600元</p>
+                <p class="h6 mt-20 font-weight-bold text-gray text-14">商品介紹 |</p>
+                <p class="h6 font-weight-bold text-gray text-14">「他們會收好你的秘密與驚喜</p>
+                <p class="h6 font-weight-bold text-gray text-14">來場忘憂自在，與小動物一起狂歡的趴踢</p>
+                <p class="h6 font-weight-bold text-gray text-14">願陪伴的時光，都富足歡樂。」</p>
+                <p class="h6 font-weight-bold text-gray text-14">．竹與皮革的異材質結合</p>
+                <p class="h6 font-weight-bold text-gray text-14">．精緻五金與手工皮件，打造質感好物</p>
+                <p class="h6 font-weight-bold text-gray text-14">．竹山手工剖製竹篾及編織工藝，具小品收納功能</p>
+                <form class="mt-5" id="formCart" name="formCart">
+                    <div class="d-sm-flex align-items-center text-center justify-content-sm-around bg-gray py-3 px-2">
+                        <div class="custom-control custom-radio pr-2">
+                            <input type="radio" class="custom-control-input" id="validationDefault01" name="radio-stacked" required>
+                            <input type="hidden" name="name" value="animal">
+                            <label class="custom-control-label" for="validationDefault01" style="width: 110px;">吱竹系列（小豬）</label>
+                        </div>
+                        <div class="text-center">
+                            <span class="mb-0 mt-3 mt-sm-0 pr-2 d-inline-block" style="width: 110px;">NTD. 2600元</span>
+                        </div>
+
+                        <div class="d-flex align-items-center mt-3 mt-sm-0  pr-sm-2">
+                            <label for="validationDefault02" class="mb-0" style="width: 55px;">品項</label>
+                            <select class="custom-select" id="validationDefault02" name="spec" required>
+                                <option selected disabled value="">請選擇</option>
+                                <option value = "吱竹系列（小豬）">吱竹系列（小豬）2600元 </option>
+                            </select>
+                        </div>
+                        <div class="d-flex align-items-center mt-3 mt-sm-0">
+                            <label for="validationDefault03" style="width: 55px;" class="mb-0">數量</label>
+                            <input type="number" class="form-control" id="validationDefault03" min="1" max="20" name="count" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="comment" class="form-control" placeholder="若有其他特殊需求，請填寫此欄位(非必填)"  id="exampleFormControlTextarea1" rows="10"></textarea>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-center mt-5">
+                        <button type="button" class="btn btn-dark rounded-pill mr-md-5" id="basic-submit">加入購物車</button>
+                        <a href="/purchase_01" class="btn btn-dark rounded-pill mt-3 mt-md-0">直接購買</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+{% include "modules/footer.html" %}
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/swiper.js"></script>
+<script src="static/js/validation.js"></script>
+</body>
+</html>

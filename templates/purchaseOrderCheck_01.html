@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -27,15 +28,16 @@
     <div class="container">
         <div class="row mt-3 mt-md-5 justify-content-center">
         <div class="col-md-9">
+            <p class="text-middle font-weight-bold text-gray">訂單編號: {{order_id}}</p>
             <p class="text-middle font-weight-bold text-gray">訂單查詢</p>
             <p class="text-small text-line-height mt-18">訂單查詢請輸入訂單編號以便查詢進度。</p>
             <p class="text-small text-line-height mt-18">若需申請退換貨，請來電或加入官方Line，將由客服人員協助處理。</p>
-            <form class="mt-20">
+            <form class="mt-20" action="/search_order" method="POST">
                 <div class="form-group">
                     <label for="exampleInputEmail1">訂單編號</label>
                     <div class="form-row">
                         <div class="col-md-10">
-                            <input type="text" class="form-control rounded-0" placeholder="請輸入訂單編號" required>
+                            <input type="text" name="id_order" class="form-control rounded-0" placeholder="請輸入訂單編號" required>
                         </div>
                         <div class="col-md-2 mt-2 mt-md-0">
                             <button type="submit" class="btn btn-dark rounded-0">送出</button>
@@ -44,7 +46,7 @@
                 </div>
             </form>
             <div class="d-flex flex-column flex-md-row justify-content-center mt-5">
-                <a href="index.html" class="btn btn-dark rounded-pill mr-md-5">回首頁</a>
+                <a href="/" class="btn btn-dark rounded-pill mr-md-5">回首頁</a>
             </div>
         </div>
         </div>
@@ -59,3 +61,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
+{% endblock %}

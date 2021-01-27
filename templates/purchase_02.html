@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -8,6 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
 </head>
+<script type="text/javascript">
+    function same_as_order(obj) {
+       document.getElementsByName("recipient_name")[0].value = document.getElementsByName("name_order")[0].value;
+       document.getElementsByName("recipient_email")[0].value = document.getElementsByName("email_order")[0].value;
+       document.getElementsByName("recipient_email")[0].value = document.getElementsByName("email_order")[0].value;
+       document.getElementsByName("recipient_cellphone")[0].value = document.getElementsByName("order_cellphone")[0].value;
+       document.getElementsByName("recipient_phone")[0].value = document.getElementsByName("order-phone")[0].value;
+       document.getElementsByName("recipient_address")[0].value = document.getElementsByName("order_address")[0].value;
+    }
+</script>
 <body>
 
 <!-- navbar -->
@@ -34,7 +45,7 @@
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         顯示購物車細節
                         </button>
-                        <div class="text-middle ml-auto mb-0">NT.660</div>
+                        <div class="text-middle ml-auto mb-0">NT.{{total_cost}}</div>
                     </div>
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -60,26 +71,30 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                    <img class="img-fluid" src="static/img/purchase/purchase-05.png" alt=""/>
-                                    </td>
-                                    <td class="align-middle text-center">動物燈飾</td>
-                                    <td class="align-middle text-center">大象燈飾</td>
-                                    <td class="align-middle text-center">1</td>
-                                    <td class="align-middle text-center">$580</td>
-                                    <td class="align-middle text-center">
-                                        <a class="text-dark" href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 大象燈飾 1 件">刪除</a>
-                                        <a href="" href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 大象燈飾 1 件"><img class="img-fluid pb-1" src="static/img/purchase/purchaseTrashCan.svg" alt="" style="height: 20px;"></a>
-                                    </td>
-                                </tr>            
+			       {% for obj in list_order %}
+				 <tr>
+				   <td>
+				     <img class="img-fluid" src="{{obj.thumbnail}}" alt=""/>
+				   </td>
+
+				   <td class="align-middle text-center">{{obj.spec}}</td>
+				   <td class="align-middle text-center">{{obj.name}}</td>
+				   <td class="align-middle text-center">{{obj.count}}</td>
+				   <td class="align-middle text-center">${{obj.cost}}</td>
+				   <td class="align-middle text-center">
+				   <a class="text-dark" href="#removeModal" class="text-muted" data-toggle="modal">刪除</a>
+				   <a href="" href="#removeModal" class="text-muted" data-toggle="modal">
+				   <img class="img-fluid pb-1" src="static/img/purchase/purchaseTrashCan.svg" alt="" style="height: 20px;"></a>
+				  </td>
+				</tr>
+			       {% endfor %}
                             <tr>
                                 <th class="text-right" colspan="5">運費</th>
-                                <th class="text-right">NT.80</th>
+                                <th class="text-right">NT.0</th>
                             </tr>
                             <tr>
                                 <th class="text-right" colspan="5">合計</th>
-                                <th class="text-right">NT.660</th>
+                                <th class="text-right">NT.{{total_cost}}</th>
                             </tr>
                             </tbody>
                         </table>
@@ -117,11 +132,11 @@
                                 </tr>            
                             <tr>
                                 <th class="text-right" colspan="4">運費</th>
-                                <th class="text-right">NT.80</th>
+                                <th class="text-right">NT.0</th>
                             </tr>
                             <tr>
                                 <th class="text-right" colspan="4">合計</th>
-                                <th class="text-right">NT.660</th>
+                                <th class="text-right">NT.{{total_cost}}</th>
                             </tr>
                             </tbody>
                         </table>
@@ -132,16 +147,16 @@
         </div>
         <div class="row mt-3 mt-md-5 justify-content-center">
             <div class="col-md-9">
-                <form action="purchaseOrderCheck_01.html">
+                <form action="/purchaseOrderCheck_01" method="POST">
                     <p class="text-middle font-weight-bold text-gray">付款方式</p>
                     <div class="d-flex mt-18">
                         <div class="custom-control custom-radio mr-5">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" required>
-                            <label class="custom-control-label text-small text-line-height" for="customRadio1">ATM轉帳匯款</label>
+                            <input type="radio" id="method1" name="method" value="ATM" class="custom-control-input" required>
+                            <label class="custom-control-label text-small text-line-height" for="method1">ATM轉帳匯款</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input " required>
-                            <label class="custom-control-label text-small text-line-height" for="customRadio2">信用卡付款</label>
+                            <input type="radio" id="method2" name="method" value="VISA" class="custom-control-input " required>
+                            <label class="custom-control-label text-small text-line-height" for="method2">信用卡付款</label>
                         </div>
                     </div>
                     <div class="mt-18">
@@ -160,41 +175,41 @@
                     <p class="text-middle font-weight-bold text-gray mt-20">統一發票</p>
                     <div class="d-flex mt-18">
                         <div class="custom-control custom-radio mr-5">
-                            <input type="radio" id="customRadio3" name="customRadio2" class="custom-control-input" required>
-                            <label class="custom-control-label text-small text-line-height " for="customRadio3">二聯式紙本發票</label>
+                            <input type="radio" id="invoice2" name="invoice" value="二聯" class="custom-control-input" required>
+                            <label class="custom-control-label text-small text-line-height " for="invoice2">二聯式紙本發票</label>
                         </div>
                         <div class="custom-control custom-radio mr-5">
-                            <input type="radio" id="customRadio4" name="customRadio2" class="custom-control-input" required>
-                            <label class="custom-control-label text-small text-line-height " for="customRadio4">三聯式紙本發票</label>
+                            <input type="radio" id="invoice3" name="invoice" value="三聯" class="custom-control-input" required>
+                            <label class="custom-control-label text-small text-line-height " for="invoice3">三聯式紙本發票</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio5" name="customRadio2" class="custom-control-input" required>
-                            <label class="custom-control-label text-small text-line-height " for="customRadio5">捐贈公益團體</label>
+                            <input type="radio" id="invoiced" name="invoice" value="捐贈" class="custom-control-input" required>
+                            <label class="custom-control-label text-small text-line-height " for="invoiced">捐贈公益團體</label>
                         </div>
                     </div>
                     <p class="text-middle font-weight-bold text-gray mt-20">訂購人資料</p>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                         <label for="validationDefault01">*姓名</label>
-                        <input type="text" class="form-control" id="validationDefault01" required>
+                        <input type="text" class="form-control" name="name_order" id="validationDefault01" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationDefault02">*電子信箱</label>
-                            <input type="text" class="form-control" id="validationDefault02" required>
+                            <input type="text" class="form-control" name="email_order" id="validationDefault02" required>
                         </div>
                     </div>
                     <div class="form-row mt-3">
                         <div class="col-md-6 mb-3">
                         <label for="validationDefault03">*行動電話</label>
-                        <input type="text" class="form-control" id="validationDefault03" required>
+                        <input type="text" class="form-control" name="order_cellphone" id="validationDefault03" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationDefault04">連絡電話</label>
-                            <input type="text" class="form-control" id="validationDefault04">
+                            <input type="text" class="form-control" name="order-phone" id="validationDefault04">
                         </div>
                         <div class="col-md-12 mb-3">
                             <label for="validationDefault05">*寄送地址</label>
-                            <input type="text" class="form-control" id="validationDefault05" required>
+                            <input type="text" class="form-control" name="order_address" id="validationDefault05" required>
                         </div>
                     </div>
                     <p class="text-middle font-weight-bold text-gray mt-20">收件人資料</p>
@@ -202,7 +217,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="recipient" name="recipient" onclick="same_as_order(this)">
                                     <label class="form-check-label" for="gridCheck">
                                     同訂購人資料
                                     </label>
@@ -211,30 +226,30 @@
                         </div>
                         <div class="col-md-6 mb-3">
                         <label for="validationDefault06">*姓名</label>
-                        <input type="text" class="form-control" id="validationDefault06" value="" required>
+                        <input type="text" class="form-control" id="validationDefault06" name="recipient_name" value="" required>
                         </div>
                         <div class="col-md-6 mb-3">
                         <label for="validationDefault07">*電子信箱</label>
-                        <input type="text" class="form-control" id="validationDefault07" value="" required>
+                        <input type="text" class="form-control" id="validationDefault07" name="recipient_email" value="" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                         <label for="validationDefault08">*行動電話</label>
-                        <input type="text" class="form-control" id="validationDefault08" required>
+                        <input type="text" class="form-control" id="validationDefault08" name="recipient_cellphone" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationDefault09">連絡電話</label>
-                            <input type="text" class="form-control" id="validationDefault09">
+                            <input type="text" class="form-control" id="validationDefault09" name="recipient_phone">
                         </div>
                         <div class="col-md-12 mb-3">
                             <label for="validationDefault10">*寄送地址</label>
-                            <input type="text" class="form-control" id="validationDefault10" required>
+                            <input type="text" class="form-control" id="validationDefault10" name="recipient_address" required>
                         </div>
                     </div>
                     <div class="form-group mt-3">
                         <label for="validationDefault11">*您的需求</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" required></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="comment" required></textarea>
                     </div>
                     <div class="d-flex justify-content-center">
                         <button class="btn btn-dark btn-lg rounded-pill mt-5" type="submit">確定送出</button>
@@ -253,3 +268,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
+{% endblock %}

@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -50,19 +51,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                            <img class="img-fluid" src="static/img/purchase/purchase-05.png" alt=""/>
-                            </td>
-                            <td class="align-middle text-center">動物燈飾</td>
-                            <td class="align-middle text-center">大象燈飾</td>
-                            <td class="align-middle text-center">1</td>
-                            <td class="align-middle text-center">$580</td>
-                            <td class="align-middle text-center">
-                                <a class="text-dark" href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 大象燈飾 1 件">刪除</a>
-                                <a href="" href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 大象燈飾 1 件"><img class="img-fluid pb-1" src="static/img/purchase/purchaseTrashCan.svg" alt="" style="height: 20px;"></a>
-                            </td>
+                       {% for obj in list_order %}
+                         <tr>
+                           <td>
+                             <img class="img-fluid" src="{{obj.thumbnail}}" alt=""/>
+                           </td>
+                           
+                           <td class="align-middle text-center">{{obj.spec}}</td>
+                           <td class="align-middle text-center">{{obj.name}}</td>
+                           <td class="align-middle text-center">{{obj.count}}</td>
+                           <td class="align-middle text-center">${{obj.cost}}</td>
+                           <td class="align-middle text-center">
+                           <a class="text-dark" href="/del_cart?id={{loop.index0}}" class="text-muted">刪除</a>
+                           <a href="/del_cart?id={{loop.index0}}" class="text-muted">
+			   <img class="img-fluid pb-1" src="static/img/purchase/purchaseTrashCan.svg" alt="" style="height: 20px;"></a>
+                          </td>
                         </tr>
+		       {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -87,21 +92,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="align-middle">動物燈飾</td>
-                            <td class="align-middle text-center">大象燈飾</td>
-                            <td class="align-middle text-center">1</td>
-                            <td class="align-middle text-center">$580</td>
-                            <td class="align-middle text-center">
-                                <a class="text-dark" href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 大象燈飾 1 件">刪除</a>
-                                <a href="" href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 大象燈飾 1 件"><img class="img-fluid pb-1" src="static/img/purchase/purchaseTrashCan.svg" alt="" style="height: 20px;"></a>
-                            </td>
+                       {% for obj in list_order %}
+                         <tr>
+                           <td>
+                             <img class="img-fluid" src="{{obj.thumbnail}}" alt=""/>
+                           </td>
+
+                           <td class="align-middle text-center">{{obj.spec}}</td>
+                           <td class="align-middle text-center">{{obj.name}}</td>
+                           <td class="align-middle text-center">{{obj.count}}</td>
+                           <td class="align-middle text-center">${{obj.cost}}</td>
+                           <td class="align-middle text-center">
+                           <a class="text-dark" href="/del_cart?id={{loop.index0}}" class="text-muted">刪除</a>
+                           <a href="/del_cart?id={{loop.index0}}" class="text-muted">
+                           <img class="img-fluid pb-1" src="static/img/purchase/purchaseTrashCan.svg" alt="" style="height: 20px;"></a>
+                          </td>
                         </tr>
+                       {% endfor %}
+
                     </tbody>
                 </table>
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-center mt-5">
-                <a href="/purchaseOrderCheck_01" class="btn btn-dark rounded-pill mr-md-5">訂單查詢</a>
+                <!--<a href="/purchaseOrderCheck_01" class="btn btn-dark rounded-pill mr-md-5">訂單查詢</a>-->
                 <a href="/purchase_02" class="btn btn-dark rounded-pill mt-3 mt-md-0">確定結帳</a>
             </div>
         </div>
@@ -117,3 +130,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
+{% endblock %}
